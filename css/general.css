@@ -368,7 +368,7 @@ main {
 	    padding-top: 56px;
 	}
 
-	.body-text {
+	.body-text, .footer-link {
 	    font-size: 12px;
 	    line-height: 13px;
 	}
