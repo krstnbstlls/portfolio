@@ -119,11 +119,12 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-column-gap: 15px;
+	grid-row-gap: 15px;
 	margin-top: 39px;
 }
 
 .skills-block .skills-card {
-	padding: 16px 32px 16px 32px;
+	padding: 32px;
 	border-radius: 10px;
 	background: #252421;
 	text-align: center;
@@ -191,8 +192,12 @@
 }
 
 @media screen and (max-width: 1100px){
-	.skills-block .skills-card {
+	/*.skills-block .skills-card {
 	    padding: 16px;
+	}*/
+	.skills-block .skills-grid {
+	    display: grid;
+	    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	}
 
 	.works-block .works-grid {
@@ -220,7 +225,7 @@
 	}
 
 	.skills-block .skills-card {
-	    padding: 10px;
+	    padding: 20px;
 	}
 
 	.works-block {
@@ -273,6 +278,7 @@
 	    justify-content: center;
 	    align-items: center;
 	    flex-wrap: wrap;
+	    align-items: stretch;
 	}
 
 	.works-block .works-grid {
@@ -282,7 +288,7 @@
 	}
 
 	.skills-block .skills-card {
-	    padding: 15px 10px 15px 10px;
+	    padding: 15px;
 	    width: 65px;
 	    margin: 10px 0px 10px 0px;
 	}
