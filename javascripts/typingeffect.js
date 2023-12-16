@@ -1,5 +1,9 @@
   	$("#typed").typed({
-  		strings: ["Software Developer"],
+		strings: [
+			"Web Developer",
+			"Front-End Developer",
+			"Software Developer",
+		],
   		typeSpeed: 100,
   		startDelay: 300,
   		backSpeed: 60,
