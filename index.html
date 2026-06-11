@@ -147,7 +147,7 @@
 		</div>
 		<div class="mrgnTp80">
 			<img src="images/works2.png" class="works-title">
-			<img src="images/uc/uc1.webp" class="under-construction">
+			<img id="wip" src="images/uc/uc1.webp" class="under-construction">
 			<div class="works-grid" style="display: none;">
 				<div id="cph" class="card">
 					<img src="images/cph.png" class="cph">
@@ -204,11 +204,7 @@
 
 <script>
 /* =========================
-   CONSTANT & CONFIG
-========================= */
-
-/* =========================
-   STATE MANAGEMENT
+   STATE
 ========================= */
 const numberOfStars = 100;
 
@@ -219,90 +215,83 @@ const DOM = {
   meteor: document.getElementById('meteorContainer'),
   girlFloat: document.getElementById('girlFloat'),
   cat01: document.getElementById('cat01'),
+  wip: document.getElementById('wip'),
 };
 
 /* =========================
-   UTILITY FUNCTIONS
+   UTILS
 ========================= */
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
-for (let i = 0; i < numberOfStars; i++) {
-	const star = document.createElement('div');
-	star.classList.add('star');
-	star.style.left = `${Math.random() * 100}vw`;
-	star.style.top = `${Math.random() * 100}vh`;
-	star.style.animation = `twinkle ${Math.random() * 1 + 0.5}s linear infinite`;
-	DOM.meteor.appendChild(star);
+/* =========================
+   STAR SYSTEM
+========================= */
+function createInitialStars() {
+  for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animation = `twinkle ${Math.random() * 1 + 0.5}s linear infinite`;
+    DOM.meteor.appendChild(star);
+  }
 }
 
 async function createStar() {
-	const star = document.createElement('div');
-	star.className = 'stars';
-	star.style.left = Math.random() * window.innerWidth + 'px';
+  const star = document.createElement('div');
+  star.className = 'stars';
+  star.style.left = `${Math.random() * window.innerWidth}px`;
 
-	DOM.meteor.appendChild(star);
+  DOM.meteor.appendChild(star);
 
-	await delay(2000);
-	star.remove();
+  await delay(2000);
+  star.remove();
 }
 
 function createStarsLoop() {
-	const interval = Math.random() * 5000;
-	createStar();
-	setTimeout(createStarsLoop, interval);
-}
-
-function animateGirl(imageId, interval = 500) {
-    const img = document.getElementById(imageId);
-
-    const frames = [
-        'images/girl/1.webp',
-        'images/girl/2.webp'
-    ];
-
-    let currentFrame = 0;
-
-    // Preload images
-    frames.forEach(src => {
-        const preload = new Image();
-        preload.src = src;
-    });
-
-    return setInterval(() => {
-        currentFrame = (currentFrame + 1) % frames.length;
-        img.src = frames[currentFrame];
-    }, interval);
-}
-
-function animateCat1(imageId, interval = 500) {
-    const img = document.getElementById(imageId);
-
-    const frames = [
-        'images/cat1/1.webp',
-        'images/cat1/2.webp'
-    ];
-
-    let currentFrame = 0;
-
-    // Preload images
-    frames.forEach(src => {
-        const preload = new Image();
-        preload.src = src;
-    });
-
-    return setInterval(() => {
-        currentFrame = (currentFrame + 1) % frames.length;
-        img.src = frames[currentFrame];
-    }, interval);
+  createStar();
+  setTimeout(createStarsLoop, Math.random() * 5000);
 }
 
 /* =========================
-  INIT
+   GENERIC FRAME ANIMATOR
+========================= */
+function animateFrames(img, frames, interval = 1000) {
+  let index = 0;
+
+  // preload
+  frames.forEach(src => {
+    const pre = new Image();
+    pre.src = src;
+  });
+
+  return setInterval(() => {
+    index = (index + 1) % frames.length;
+    img.src = frames[index];
+  }, interval);
+}
+
+/* =========================
+   INIT
 ========================= */
 document.addEventListener('DOMContentLoaded', () => {
+  createInitialStars();
   createStarsLoop();
-  animateGirl('girlFloat', 500);
-  animateCat1('cat01', 1000);
+
+  animateFrames(DOM.girlFloat, [
+    'images/girl/1.webp',
+    'images/girl/2.webp'
+  ], 500);
+
+  animateFrames(DOM.cat01, [
+    'images/cat1/1.webp',
+    'images/cat1/2.webp'
+  ], 1000);
+
+  animateFrames(DOM.wip, [
+    'images/uc/uc1.webp',
+    'images/uc/uc2.webp'
+  ], 1000);
 });
 </script>
 </html>
