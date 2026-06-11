@@ -147,7 +147,11 @@
 		</div>
 		<div class="mrgnTp80">
 			<img src="images/works2.png" class="works-title">
-			<img id="wip" src="images/uc/uc1.webp" class="under-construction">
+			<div class="wip-container">
+				<img id="wip" src="images/uc/wip_half1.png" class="wip">
+				<div id="bat" class="wip-bg"></div>
+			</div>
+			<!-- <img id="wip" src="images/uc/uc1.webp" class="under-construction"> -->
 			<div class="works-grid" style="display: none;">
 				<div id="cph" class="card">
 					<img src="images/cph.png" class="cph">
@@ -216,6 +220,7 @@ const DOM = {
   girlFloat: document.getElementById('girlFloat'),
   cat01: document.getElementById('cat01'),
   wip: document.getElementById('wip'),
+  bat: document.getElementById('bat'),
 };
 
 /* =========================
@@ -268,6 +273,17 @@ function animateFrames(img, frames, interval = 1000) {
   return setInterval(() => {
     index = (index + 1) % frames.length;
     img.src = frames[index];
+
+    // ONLY apply to DOM.wip
+    if (img === DOM.wip) {
+      if (frames[index] === 'images/uc/wip_half2.png') {
+        DOM.bat.classList.add('show');
+		DOM.bat.classList.remove('hide');
+      } else {
+		DOM.bat.classList.add('hide');
+        DOM.bat.classList.remove('show');
+      }
+    }
   }, interval);
 }
 
@@ -281,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animateFrames(DOM.girlFloat, [
     'images/girl/1.webp',
     'images/girl/2.webp'
-  ], 500);
+  ], 1500);
 
   animateFrames(DOM.cat01, [
     'images/cat1/1.webp',
@@ -289,9 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ], 1000);
 
   animateFrames(DOM.wip, [
-    'images/uc/uc1.webp',
-    'images/uc/uc2.webp'
-  ], 1000);
+    'images/uc/wip_half1.png',
+    'images/uc/wip_half2.png'
+  ], 2000);
 });
 </script>
 </html>

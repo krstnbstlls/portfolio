@@ -407,11 +407,70 @@ img.mail {
 	color: #ffffff;
 }
 
-img.under-construction {
+/* img.under-construction {
     width: 100%;
     height: 500px;
     object-fit: contain;
-    /* margin-top: 100px; */
+    margin-top: 100px;
+} */
+
+.wip-container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.wip-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(133.96deg, #4C5183 0%, #171A3B 100%);
+    border: 3px solid white;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.wip-bg::after{
+    content: '';
+    position: absolute;
+    top: -32%;
+    left: 7%;
+    height: 123px;
+    width: 72px;
+    background-image: url(../images/bat.png);
+    background-position: center;
+    background-size: 100% 100%;
+    transition: top 500ms ease-in-out;
+}
+
+.wip-bg.hide::after{
+    top: -32%;
+}
+
+.wip-bg.show:after{
+    top: -7%;
+}
+
+#wip {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 8%;
+    z-index: 2;
+}
+
+.wip-container::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 3px;
+    background: white;
+    z-index: 3;
 }
 
 .meteor-container {
