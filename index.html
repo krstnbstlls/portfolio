@@ -29,12 +29,12 @@
 	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-	<div class="meteor-container"></div>
+	<div id="meteorContainer" class="meteor-container"></div>
 	<img src="images/moon.png" class="moon">
 	<main>
 		<div class="d-flex justify-content-between align-items-end">
 			
-			<img src="images/girl.png" class="girl">
+			<img id="girlFloat" src="images/girl/1.webp" class="girl">
 			<div class="info">
 				<span class="position">Front-End Web Developer</span>
 				<img src="images/ayab2.png" class="ayab">
@@ -68,7 +68,7 @@
 					<p class="m-0">November 2019 LEENTech Network Solutions Inc.</p>
 				</div>
 			</div>
-			<img src="images/cat01.png" class="cat01">
+			<img id="cat01" src="images/cat1/1.webp" class="cat01">
 		</div>
 		<div class="skills-block d-flex flex-column mrgnTp80">
 			<img src="images/skills2.png" class="skills-title">
@@ -203,35 +203,106 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 
 <script>
-    // Number of stars you want
-    const numberOfStars = 100;
-    const container = document.querySelector('.meteor-container');
-    for (let i = 0; i < numberOfStars; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-      star.style.left = `${Math.random() * 100}vw`;
-      star.style.top = `${Math.random() * 100}vh`;
-      star.style.animation = `twinkle ${Math.random() * 1 + 0.5}s linear infinite`;
-      container.appendChild(star);
-    }
+/* =========================
+   CONSTANT & CONFIG
+========================= */
 
-	function createStar() {
-		const star = document.createElement('div');
-		star.className = 'stars';
-		star.style.left = Math.random() * window.innerWidth + 'px';
-		document.querySelector('.meteor-container').appendChild(star);
-		setTimeout(() => {
-			star.remove();
-		}, 2000);
-	}
+/* =========================
+   STATE MANAGEMENT
+========================= */
+const numberOfStars = 100;
 
-	function createStarsLoop() {
-		const interval = Math.random() * 5000; // Adjust the interval between star showers
-		createStar();
-		setTimeout(createStarsLoop, interval);
-	}
+/* =========================
+   DOM CACHE
+========================= */
+const DOM = {
+  meteor: document.getElementById('meteorContainer'),
+  girlFloat: document.getElementById('girlFloat'),
+  cat01: document.getElementById('cat01'),
+};
 
-	createStarsLoop();
-  </script>
+/* =========================
+   UTILITY FUNCTIONS
+========================= */
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+for (let i = 0; i < numberOfStars; i++) {
+	const star = document.createElement('div');
+	star.classList.add('star');
+	star.style.left = `${Math.random() * 100}vw`;
+	star.style.top = `${Math.random() * 100}vh`;
+	star.style.animation = `twinkle ${Math.random() * 1 + 0.5}s linear infinite`;
+	DOM.meteor.appendChild(star);
+}
+
+async function createStar() {
+	const star = document.createElement('div');
+	star.className = 'stars';
+	star.style.left = Math.random() * window.innerWidth + 'px';
+
+	DOM.meteor.appendChild(star);
+
+	await delay(2000);
+	star.remove();
+}
+
+function createStarsLoop() {
+	const interval = Math.random() * 5000;
+	createStar();
+	setTimeout(createStarsLoop, interval);
+}
+
+function animateGirl(imageId, interval = 500) {
+    const img = document.getElementById(imageId);
+
+    const frames = [
+        'images/girl/1.webp',
+        'images/girl/2.webp'
+    ];
+
+    let currentFrame = 0;
+
+    // Preload images
+    frames.forEach(src => {
+        const preload = new Image();
+        preload.src = src;
+    });
+
+    return setInterval(() => {
+        currentFrame = (currentFrame + 1) % frames.length;
+        img.src = frames[currentFrame];
+    }, interval);
+}
+
+function animateCat1(imageId, interval = 500) {
+    const img = document.getElementById(imageId);
+
+    const frames = [
+        'images/cat1/1.webp',
+        'images/cat1/2.webp'
+    ];
+
+    let currentFrame = 0;
+
+    // Preload images
+    frames.forEach(src => {
+        const preload = new Image();
+        preload.src = src;
+    });
+
+    return setInterval(() => {
+        currentFrame = (currentFrame + 1) % frames.length;
+        img.src = frames[currentFrame];
+    }, interval);
+}
+
+/* =========================
+  INIT
+========================= */
+document.addEventListener('DOMContentLoaded', () => {
+  createStarsLoop();
+  animateGirl('girlFloat', 500);
+  animateCat1('cat01', 1000);
+});
+</script>
 </html>

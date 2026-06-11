@@ -59,6 +59,24 @@ img.moon {
     top: 10%;
     right: 29%;
     z-index: -1;
+    animation: moonShine 5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes moonShine {
+    0%, 100% {
+        filter:
+            drop-shadow(0 0 15px rgba(255,255,255,.8))
+            drop-shadow(0 0 40px rgba(255,255,255,.6))
+            drop-shadow(0 0 80px rgba(255,255,255,.4));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 25px rgba(255,255,255,1))
+            drop-shadow(0 0 60px rgba(255,255,255,.9))
+            drop-shadow(0 0 120px rgba(255,255,255,.7));
+    }
 }
 
 p, .certificates .item a{
