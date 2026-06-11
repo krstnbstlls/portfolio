@@ -416,16 +416,19 @@ img.mail {
 
 .wip-container{
     position: relative;
-    width: 500px;
+    width: 42%;
     height: 500px;
     margin: auto;
+}
+
+.wip-bg, .wip-container::after{
+    width: 89%;
 }
 
 .wip-bg{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 400px;
     height: 400px;
     background: linear-gradient(133.96deg, #4C5183 0%, #171A3B 100%);
     border: 3px solid white;
@@ -458,7 +461,7 @@ img.mail {
     position: absolute;
     height: 100%;
     top: 0;
-    right: 8%;
+    right: 0%;
     z-index: 2;
 }
 
@@ -467,7 +470,6 @@ img.mail {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 400px;
     height: 3px;
     background: white;
     z-index: 3;
