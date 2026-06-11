@@ -147,40 +147,15 @@
 		</div>
 		<div class="mrgnTp80">
 			<img src="images/works2.png" class="works-title">
-			<div class="wip-container">
+			<div class="wip-container d-none">
 				<img id="wip" src="images/uc/wip_half1.png" class="wip">
 				<div id="bat" class="wip-bg"></div>
 			</div>
-			<!-- <img id="wip" src="images/uc/uc1.webp" class="under-construction"> -->
-			<div class="works-grid" style="display: none;">
-				<div id="cph" class="card">
-					<img src="images/cph.png" class="cph">
-					<span>HTML5, CSS3, JS</span>
-					<img src="images/rabbit01.png" class="rabbit01">
-				</div>
-				<div id="mfc" class="card">
-					<img src="images/mfc.png" class="mfc">
-					<span>HTML5, CSS3, JS</span>
-					<img src="images/rabbit02.png" class="rabbit02">
-				</div>
-				<div id="ik" class="card">
-					<img src="images/isay.png" class="ik">
-					<span>HTML5, CSS3, JS</span>
-					<img src="images/cat02.png" class="cat02">
-				</div>
-				<div id="hydra" class="card">
-					<img src="images/hydra.png" class="hydra">
-					<span>Webdflo.io</span>
-					<img src="images/rabbit03.png" class="rabbit03">
-				</div>
-				<div id="ol" class="card">
-					<img src="images/ol.png" class="ol">
-					<span>HTML5, CSS3, JS</span>
-					<span>Bootstrap v4, JQuery</span>
-					<img src="images/cat03.png" class="cat03">
-				</div>
+			<div class="grid-works">
+				<div class="witchGirl">
+					<img id="witchGirl" src="images/girlBroom/witchgirl1.png">
+				</div>>
 			</div>
-			
 		</div>
 		<div class="getintouch-block d-flex flex-column align-items-center text-center">
 			<img src="images/getintouch.png" class="getintouch">
@@ -221,6 +196,7 @@ const DOM = {
   cat01: document.getElementById('cat01'),
   wip: document.getElementById('wip'),
   bat: document.getElementById('bat'),
+  witchGirl: document.getElementById('witchGirl'),
 };
 
 /* =========================
@@ -307,6 +283,11 @@ document.addEventListener('DOMContentLoaded', () => {
   animateFrames(DOM.wip, [
     'images/uc/wip_half1.png',
     'images/uc/wip_half2.png'
+  ], 2000);
+
+  animateFrames(DOM.witchGirl, [
+    'images/girlBroom/witchgirl1.png',
+    'images/girlBroom/witchgirl2.png'
   ], 2000);
 });
 </script>
