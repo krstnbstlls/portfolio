@@ -151,13 +151,22 @@ span.position {
     color: #000000;
 }
 
-img.about-title,
+/* img.about-title,
 .crtfcts-title,
 .skills-title,
 .works-title {
 	height: 80px;
 	width: max-content;
+} */
+
+.crtfcts-title {
+    width: 73%;
 }
+
+img.about-title, .skills-title, .works-title {
+    width: 35%;
+}
+
 
 img.about-title{
     margin-bottom: 44px;
@@ -246,7 +255,7 @@ img.skills-title {
 
 .witchGirl img{
     width: 100%;
-    animation: float 9s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
 
