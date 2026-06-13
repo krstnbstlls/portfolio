@@ -590,7 +590,7 @@ img.mail {
 
 .bookshelves {
     position: relative;
-    background-image: url(../images/bookshelves/webp/compress/converted_bookshelves.webp);
+    background-image: url(../images/bookshelves/sm/bookshelves.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -602,7 +602,7 @@ img.mail {
 .bookshelves::before {
     content: '';
     position: absolute;
-    background-image: url(../images/bookshelves/webp/compress/converted_board.webp);
+    background-image: url(../images/bookshelves/sm/board.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -617,7 +617,7 @@ img.mail {
 .bookshelves::after {
     content: '';
     position: absolute;
-    background-image: url(../images/bookshelves/webp/compress/converted_click-a-book.webp);
+    background-image: url(../images/bookshelves/sm/click-a-book.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -712,7 +712,7 @@ img.mail {
     z-index: 2;
 }
 
-.book1::after { background-image: url(../images/bookshelves/webp/compress/converted_book1.webp); }
+.book1::after { background-image: url(../images/bookshelves/sm/book1.webp); }
 
 /* --------- */
 .book2 {
@@ -724,7 +724,7 @@ img.mail {
     z-index: 1;
 }
 
-.book2::after { background-image: url(../images/bookshelves/webp/compress/converted_book2.webp); }
+.book2::after { background-image: url(../images/bookshelves/sm/book2.webp); }
 
 /* --------- */
 .book3 {
@@ -736,7 +736,7 @@ img.mail {
     z-index: 1;
 }
 
-.book3::after { background-image: url(../images/bookshelves/webp/compress/converted_book3.webp); }
+.book3::after { background-image: url(../images/bookshelves/sm/book3.webp); }
 
 /* --------- */
 .candle1 {
@@ -764,7 +764,7 @@ img.mail {
 }
 
 .candle1::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_candle.webp);
+    background-image: url(../images/bookshelves/sm/candle.webp);
     z-index: 2;
 }
 
@@ -779,7 +779,7 @@ img.mail {
 }
 
 .flowerpot1::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_flowerpot1.webp);
+    background-image: url(../images/bookshelves/sm/flowerpot1.webp);
     z-index: 1;
 }
 
@@ -836,7 +836,7 @@ img.hangingplant2 {
 }
 
 .blackcat::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_blackcat.webp);
+    background-image: url(../images/bookshelves/sm/blackcat.webp);
 }
 
 /* --------- */
@@ -850,7 +850,7 @@ img.hangingplant2 {
 }
 
 .book4::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book4.webp);
+    background-image: url(../images/bookshelves/sm/book4.webp);
 }
 
 /* --------- */
@@ -864,7 +864,7 @@ img.hangingplant2 {
 }
 
 .book5::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book5.webp);
+    background-image: url(../images/bookshelves/sm/book5.webp);
 }
 
 /* --------- */
@@ -878,7 +878,7 @@ img.hangingplant2 {
 }
 
 .book6::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book6.webp);
+    background-image: url(../images/bookshelves/sm/book6.webp);
 }
 
 /* --------- */
@@ -892,7 +892,7 @@ img.hangingplant2 {
 }
 
 .flowerpot2::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_flowerpot2.webp);
+    background-image: url(../images/bookshelves/sm/flowerpot2.webp);
 }
 
 
@@ -907,7 +907,7 @@ img.hangingplant2 {
 }
 
 .book7::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book7.webp);
+    background-image: url(../images/bookshelves/sm/book7.webp);
 }
 
 /* --------- */
@@ -920,7 +920,7 @@ img.hangingplant2 {
 }
 
 .book8::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book8.webp);
+    background-image: url(../images/bookshelves/sm/book8.webp);
 }
 
 /* --------- */
@@ -933,7 +933,7 @@ img.hangingplant2 {
 }
 
 .book9::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book9.webp);
+    background-image: url(../images/bookshelves/sm/book9.webp);
 }
 
 /* ---------------------- */
@@ -951,7 +951,7 @@ img.hangingplant2 {
     left: -11px;
     height: 55px;
     width: 183px;
-    background: url(../images/bookshelves/webp/compress/converted_plant2.webp);
+    background: url(../images/bookshelves/sm/plant2.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -964,7 +964,7 @@ img.hangingplant2 {
     left: 155px;
     height: 55px;
     width: 183px;
-    background: url(../images/bookshelves/webp/compress/converted_plant2.webp);
+    background: url(../images/bookshelves/sm/plant2.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1024,7 +1024,7 @@ img.hangingplant2 {
 }
 
 .flowerpot3::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_flowerpot3.webp);
+    background-image: url(../images/bookshelves/sm/flowerpot3.webp);
 }
 
 /* --------- */
@@ -1037,7 +1037,7 @@ img.hangingplant2 {
 }
 
 .book10::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book10.webp);
+    background-image: url(../images/bookshelves/sm/book10.webp);
 }
 
 /* --------- */
@@ -1050,7 +1050,7 @@ img.hangingplant2 {
 }
 
 .book11::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book11.webp);
+    background-image: url(../images/bookshelves/sm/book11.webp);
 }
 
 
@@ -1065,7 +1065,7 @@ img.hangingplant2 {
 }
 
 .book12::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book12.webp);
+    background-image: url(../images/bookshelves/sm/book12.webp);
 }
 
 
@@ -1080,7 +1080,7 @@ img.hangingplant2 {
 }
 
 .book13::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_book3.webp);
+    background-image: url(../images/bookshelves/sm/book3.webp);
 }
 
 
@@ -1095,5 +1095,5 @@ img.hangingplant2 {
 }
 
 .flowerpot4::after {
-    background-image: url(../images/bookshelves/webp/compress/converted_flowerpot4.webp);
+    background-image: url(../images/bookshelves/sm/flowerpot4.webp);
 }
