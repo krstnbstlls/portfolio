@@ -617,7 +617,7 @@ img.mail {
 .bookshelves::after {
     content: '';
     position: absolute;
-    background-image: url(../images/bookshelves/sm/click-a-book.webp);
+    background-image: url(../images/bookshelves/sm/pick-a-book.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
