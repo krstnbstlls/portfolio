@@ -160,6 +160,12 @@
     }
 }
 
+@media screen and (max-width: 430px){
+    .skills-block .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media screen and (max-width: 414px){
     img.cat01 {
         width: 33%;
@@ -189,9 +195,7 @@
 }
 
 @media screen and (max-width: 375px){
-    .skills-block .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+
 }
 
 @media screen and (max-width: 360px){
