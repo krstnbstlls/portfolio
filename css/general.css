@@ -8,6 +8,13 @@ body {
 	background: #4F5379;
 }
 
+img {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: auto;
+    will-change: transform;
+}
+
 main {
 	position: relative;
 	overflow: hidden;
@@ -243,22 +250,26 @@ img.skills-title {
 }
 
 /* --//////////////////////-- */
-.grid-works{
+.grid-works {
     position: relative;
-    margin-top: 27px;
+    width: 680px;
+    margin: 50px auto 0px;
 }
 
 .witchGirl {
-    width: 44%;
-    margin: auto;
+    position: absolute;
+    width: 431px;
+    height: 341px;
+    transform: rotateY(180deg);
+    top: 24%;
+    left: 57%;
+    z-index: 3;
 }
 
 .witchGirl img{
     width: 100%;
     animation: float 5s ease-in-out infinite;
 }
-
-
 
 .works-grid {
     grid-column-gap: 100px;
@@ -397,7 +408,7 @@ img.cat03 {
 }
 
 .getintouch-block {
-    padding-top: 100px;
+    padding-top: 35px;
     padding-bottom: 19px;
     color: #ffffff;
 }
@@ -575,3 +586,514 @@ img.mail {
       transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
     }
   }
+
+
+.bookshelves {
+    position: relative;
+    background-image: url(../images/bookshelves/webp/bookshelves.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 680px;
+    padding: 22px 22px 28px 22px;
+}
+
+.bookshelves::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/bookshelves/webp/board.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 173px;
+    height: 55px;
+    z-index: 4;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(7deg);
+}
+
+.bookshelves::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/bookshelves/webp/click-a-book.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 137px;
+    height: 31px;
+    z-index: 5;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(7deg);
+    animation: glow-pulse 0.5s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+      /* Soft glow state */
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.6));
+    }
+    to {
+      /* Strong glow state */
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+    }
+  }
+
+/* --------------------------- */
+.book1, .book2, .book3, .book4, .book5, 
+.book6, .book7, .book8, .book9,
+.book10, .book11, .book12, .book13{
+    position: absolute;
+    cursor: pointer;
+}
+
+.book1:hover, .book2:hover, .book3:hover, .book4:hover, .book5:hover,
+.book6:hover, .book7:hover, .book8:hover, .book9:hover,
+.book10:hover, .book11:hover, .book12:hover, .book13:hover{ 
+    z-index: 6; 
+}
+
+.book1:hover::after, .book2:hover::after, .book3:hover::after, .book4:hover::after, .book5:hover::after,
+.book6:hover::after, .book7:hover::after, .book8:hover::after, .book9:hover::after,
+.book10:hover::after, .book11:hover::after, .book12:hover::after, .book13:hover::after{ 
+    transform: scale(1.1); 
+}
+
+.book1::after, .book2::after, .book3::after, .book4::after, .book5::after,
+.book6::after, .book7::after, .book8::after, .book9::after,
+.book10::after, .book11::after, .book12::after, .book13::after {
+    transition: transform 0.12s ease-out;
+}
+
+.book1::after, .book2::after, .book3::after,
+.candle1::after, .flowerpot1::after, .blackcat::after,
+.book4::after, .book5::after, .book6::after,
+.flowerpot2::after,
+.book7::after, .book8::after, .book9::after,
+.flowerpot3::after,
+.book10::after, .book11::after, .book12::after, .book13::after,
+.flowerpot4::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@keyframes candleGlow {
+    from {
+        box-shadow: 0px 4px 16px 20px #DBBA86;
+    }
+    to {
+        box-shadow: 0px 4px 16px 14px #DBBA86;
+    }
+}
+
+/* --------------------------- */
+.first-floor {
+    width: 100%;
+    height: 194px;
+    position: relative;
+    z-index: 3;
+}
+
+/* --------- */
+.book1 {
+    height: 107px;
+    width: 34px;
+    bottom: 0%;
+    left: 67px;
+    z-index: 2;
+}
+
+.book1::after { background-image: url(../images/bookshelves/webp/book1.webp); }
+
+/* --------- */
+.book2 {
+    height: 117px;
+    width: 33px;
+    bottom: 0%;
+    left: 103px;
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+
+.book2::after { background-image: url(../images/bookshelves/webp/book2.webp); }
+
+/* --------- */
+.book3 {
+    height: 87px;
+    width: 29px;
+    bottom: -29px;
+    left: 171px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.book3::after { background-image: url(../images/bookshelves/webp/book3.webp); }
+
+/* --------- */
+.candle1 {
+    height: 46px;
+    width: 49px;
+    position: absolute;
+    bottom: 12%;
+    left: 159px;
+    z-index: 2;
+}
+
+.candle1::before {
+    content: '';
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 1px;
+    border-radius: 100%;
+    background: #dbba86;
+    box-shadow: 0px 4px 16px 20px #DBBA86;
+    z-index: 1;
+    animation: candleGlow 2s ease-in-out infinite alternate;
+}
+
+.candle1::after {
+    background-image: url(../images/bookshelves/webp/candle.webp);
+    z-index: 2;
+}
+
+/* --------- */
+.flowerpot1 {
+    height: 132px;
+    width: 81px;
+    position: absolute;
+    bottom: 0;
+    right: 86px;
+    z-index: 1;
+}
+
+.flowerpot1::after {
+    background-image: url(../images/bookshelves/webp/flowerpot1.webp);
+    z-index: 1;
+}
+
+/* --------- */
+img.hangingplant1, img.hangingplant2 {
+    position: absolute;
+    z-index: 2;
+    transform-origin: top center;
+}
+
+img.hangingplant1 {
+    height: 179px;
+    left: 12px;
+    bottom: -118px;
+    animation: hangingplant 5s ease-in-out infinite;
+}
+
+@keyframes hangingplant {
+  0%   { transform: rotate(-6deg); }
+  50%  { transform: rotate(6deg); }
+  100% { transform: rotate(-6deg); }
+}
+
+img.hangingplant2 {
+    height: 169px;
+    left: 34px;
+    bottom: -108px;
+    transform: rotateY(180deg);
+    animation: hangingplant2 6s ease-in-out infinite;
+}
+
+@keyframes hangingplant2 {
+  0%   { transform: rotateY(180deg) rotate(-6deg); }
+  50%  { transform: rotateY(180deg) rotate(6deg); }
+  100% { transform: rotateY(180deg) rotate(-6deg); }
+}
+
+/* ---------------------- */
+.second-floor {
+    width: 100%;
+    height: 232px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --------- */
+.blackcat {
+    height: 163px;
+    width: 106px;
+    position: absolute;
+    bottom: -18px;
+    left: 25px;
+    z-index: 1;
+}
+
+.blackcat::after {
+    background-image: url(../images/bookshelves/webp/blackcat.webp);
+}
+
+/* --------- */
+.book4 {
+    height: 130px;
+    width: 32px;
+    bottom: -22%;
+    left: 182px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.book4::after {
+    background-image: url(../images/bookshelves/webp/book4.webp);
+}
+
+/* --------- */
+.book5 {
+    height: 118px;
+    width: 38px;
+    bottom: -5%;
+    left: 176px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.book5::after {
+    background-image: url(../images/bookshelves/webp/book5.webp);
+}
+
+/* --------- */
+.book6 {
+    height: 108px;
+    width: 36px;
+    bottom: 12%;
+    left: 179px;
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+.book6::after {
+    background-image: url(../images/bookshelves/webp/book6.webp);
+}
+
+/* --------- */
+.flowerpot2 {
+    height: 118px;
+    width: 72px;
+    position: absolute;
+    bottom: 42%;
+    left: 179px;
+    z-index: 2;
+}
+
+.flowerpot2::after {
+    background-image: url(../images/bookshelves/webp/flowerpot2.webp);
+}
+
+
+/* --------- */
+.book7 {
+    height: 111px;
+    width: 37px;
+    bottom: 0%;
+    right: 108px;
+    transform: rotate(-17deg);
+    z-index: 1;
+}
+
+.book7::after {
+    background-image: url(../images/bookshelves/webp/book7.webp);
+}
+
+/* --------- */
+.book8 {
+    height: 128px;
+    width: 31px;
+    bottom: -1%;
+    right: 60px;
+    z-index: 1;
+}
+
+.book8::after {
+    background-image: url(../images/bookshelves/webp/book8.webp);
+}
+
+/* --------- */
+.book9 {
+    height: 117px;
+    width: 37px;
+    bottom: -1%;
+    right: 24px;
+    z-index: 1;
+}
+
+.book9::after {
+    background-image: url(../images/bookshelves/webp/book9.webp);
+}
+
+/* ---------------------- */
+.third-floor {
+    width: 100%;
+    height: 204px;
+    position: relative;
+    z-index: 2;
+}
+
+.third-floor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -11px;
+    height: 55px;
+    width: 183px;
+    background: url(../images/bookshelves/webp/plant2.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.third-floor::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 155px;
+    height: 55px;
+    width: 183px;
+    background: url(../images/bookshelves/webp/plant2.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(178deg);
+}
+
+/* --------- */
+.candle2 {
+    height: 92px;
+    width: 93px;
+    position: absolute;
+    bottom: -3%;
+    left: 22px;
+    z-index: 1;
+}
+
+.candle2 img{ height: 100%; }
+
+.candle2::before {
+    content: '';
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 1px;
+    border-radius: 100%;
+    background: #dbba86;
+    box-shadow: 0px 4px 16px 20px #DBBA86;
+    z-index: -1;
+    animation: candleGlow 2.5s ease-in-out infinite alternate;
+}
+
+.candle2::after {
+    content: '';
+    position: absolute;
+    top: 7%;
+    left: 66%;
+    transform: translate(-50%, -50%) scale(1.5);
+    height: 1px;
+    width: 1px;
+    border-radius: 100%;
+    background: #dbba86;
+    box-shadow: 0px 4px 16px 20px #DBBA86;
+    z-index: -1;
+    animation: candleGlow 3s ease-in-out infinite alternate;
+}
+
+/* --------- */
+.flowerpot3 {
+    height: 166px;
+    width: 69px;
+    position: absolute;
+    bottom: -1%;
+    left: 116px;
+    z-index: 1;
+}
+
+.flowerpot3::after {
+    background-image: url(../images/bookshelves/webp/flowerpot3.webp);
+}
+
+/* --------- */
+.book10 {
+    height: 136px;
+    width: 33px;
+    bottom: 0;
+    left: 180px;
+    z-index: 1;
+}
+
+.book10::after {
+    background-image: url(../images/bookshelves/webp/book10.webp);
+}
+
+/* --------- */
+.book11 {
+    height: 115px;
+    width: 36px;
+    bottom: 0;
+    left: 212px;
+    z-index: 1;
+}
+
+.book11::after {
+    background-image: url(../images/bookshelves/webp/book11.webp);
+}
+
+
+/* --------- */
+.book12 {
+    height: 114px;
+    width: 38px;
+    bottom: -19%;
+    right: 80px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.book12::after {
+    background-image: url(../images/bookshelves/webp/book12.webp);
+}
+
+
+/* --------- */
+.book13 {
+    height: 87px;
+    width: 29px;
+    bottom: 3%;
+    right: 80px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.book13::after {
+    background-image: url(../images/bookshelves/webp/book3.webp);
+}
+
+
+/* --------- */
+.flowerpot4 {
+    height: 172px;
+    width: 79px;
+    position: absolute;
+    bottom: 0;
+    right: -13px;
+    z-index: 1;
+}
+
+.flowerpot4::after {
+    background-image: url(../images/bookshelves/webp/flowerpot4.webp);
+}

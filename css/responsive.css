@@ -13,11 +13,6 @@
 }
 
 @media screen and (max-width: 1024px){
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 60px;
-        width: max-content;
-    } */
-
     p, span, .material-symbols-outlined, .certificates .item a {
         font-size: 20px;
     }
@@ -33,11 +28,6 @@
 }
 
 @media screen and (max-width: 912px){
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 54px;
-        width: max-content;
-    } */
-
     p, span, .material-symbols-outlined, .certificates .item a {
         font-size: 17px;
     }
@@ -61,19 +51,12 @@
         padding: 0px 0px 15px 15px;
     }
 
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 48px;
-    } */
-
     p, span, .material-symbols-outlined, .certificates .item a {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 768px){
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 40px;
-    } */
 
     span.position {
         top: -22%;
@@ -81,6 +64,25 @@
 
     .mrgnTp80 {
         padding-top: 50px;
+    }
+
+    .witchGirl {
+        top: 0%;
+        left: 50%;
+
+    }
+}
+
+@media screen and (max-width: 680px){
+    .grid-works {
+        width: 500px;
+    }
+
+    .witchGirl {
+        width: 321px;
+        height: 256px;
+        top: 6%;
+        left: 49%;
     }
 }
 
@@ -90,7 +92,7 @@
     }
 
     span.position {
-        top: -28%;
+        top: -38%;
     }
 
     .info p {
@@ -101,16 +103,14 @@
         margin-bottom: 10px;
     }
 
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 36px;
-    } */
-
     p, span, .material-symbols-outlined, .certificates .item a, .skills-grid p, .getintouch-block p.dets, .getintouch-block a {
         font-size: 12px;
     }
 
     .skills-block .skills-grid {
         grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         margin-top: 10px;
     }
 
@@ -130,33 +130,33 @@
         height: 250px;
         margin-top: 25px;
     }
-}
-
-@media screen and (max-width: 540px){
-    span.position {
-        top: -38%;
-    }
 
     .certificates .item {
-        margin-bottom: 10px;
+    margin-bottom: 10px;
     }
 
-    /* img.about-title, .crtfcts-title, .skills-title, .works-title {
-        height: 29px;
-    } */
-
-    .skills-block .skills-grid {
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+    .grid-works {
+        width: 100%;
+        margin: 12px auto 0px;
     }
 
-    .skills-grid img.rate {
-        height: 10px;
+    .grid-outer-con{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .skills-grid img.skills {
-        height: 50px;
+    .witchGirl{
+        width: 266px;
+        height: 195px;
+        top: 13%;
+        left: 65%;
+    }
+
+    .bookshelves {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -0%);
     }
 }
 
@@ -176,12 +176,38 @@
     img.getintouch {
         height: 25px;
     }
+
+    .bookshelves {
+        transform: translate(-50%, -0%) scale(0.96);
+    }
+}
+
+@media screen and (max-width: 390px){
+    .bookshelves {
+        transform: translate(-50%, -0%) scale(0.9);
+    }
+}
+
+@media screen and (max-width: 375px){
+    .skills-block .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 360px){
+    .bookshelves {
+        transform: translate(-50%, -0%) scale(0.85);
+    }
+}
+
+@media screen and (max-width: 344px){
+    .bookshelves {
+        transform: translate(-50%, -0%) scale(0.8);
+    }
+
 }
 
 @media screen and (max-width: 320px){
-    .skills-block .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
 
     img.under-construction {
         height: 200px;
