@@ -41,7 +41,7 @@ main::before {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url(../images/nightclouds.png);
+    background-image: url(../images/nightclouds.webp);
     background-position: top;
     background-size: cover;
     z-index: -1;
@@ -54,7 +54,7 @@ main::after {
     left: 0;
     height: 35vh;
     width: 100vw;
-    background-image: url(../images/nightgrass.png);
+    background-image: url(../images/nightgrass.webp);
     background-position: top;
     background-size: cover;
     z-index: -1;
@@ -154,7 +154,7 @@ span.position {
     position: absolute;
     right: 5%;
     top: -12%;
-    border: 4px solid black;
+    border: 2px solid black;
     color: #000000;
 }
 
@@ -246,7 +246,7 @@ img.cat01 {
 }
 
 .shelf.shelf1{
-    background: url(../images/skills/shelf.png) center / cover no-repeat;
+    background: url(../images/skills/shelf.webp) center / cover no-repeat;
     margin-right: 25px;
 }
 
@@ -257,7 +257,7 @@ img.cat01 {
     width: 257px;
     height: 250px;
     transform: rotate(3deg);
-    background: url(../images/skills/hanging_plant01.png) center / cover no-repeat;
+    background: url(../images/skills/hanging_plant01.webp) center / cover no-repeat;
 }
 
 .shelf1 .hanging-plants-shelf::before, .shelf1 .hanging-plants-shelf::after {
@@ -271,13 +271,13 @@ img.cat01 {
 
 .shelf1 .hanging-plants-shelf::before {
     left: 43%;
-    background: url(../images/skills/purple_1_stem.png) center / contain no-repeat;
+    background: url(../images/skills/purple_1_stem.webp) center / contain no-repeat;
     animation: swinginhangingstem 5s ease-in-out infinite;
 }
 
 .shelf1 .hanging-plants-shelf::after {
     left: 46%;
-    background: url(../images/skills/purple_1_stem.png) center / contain no-repeat;
+    background: url(../images/skills/purple_1_stem.webp) center / contain no-repeat;
     animation: swinginhangingstem 4.5s ease-in-out infinite;
 }
 
@@ -308,7 +308,7 @@ img.cat01 {
     top: 0;
     left: 0;
     width: 100%;
-    background: url(../images/skills/empty_red_jar.png) center / contain no-repeat;
+    background: url(../images/skills/empty_red_jar.webp) center / contain no-repeat;
     z-index: 3;
 }
 
@@ -321,7 +321,7 @@ img.cat01 {
 .shelf1 .flower-jar-shelf::before {
     bottom: 33%;
     left: 22%;
-    background: url(../images/skills/pink_flower.png) center / contain no-repeat;
+    background: url(../images/skills/pink_flower.webp) center / contain no-repeat;
     transform: scale(1.5) rotate(-9deg);
     z-index: 1;
 }
@@ -329,7 +329,7 @@ img.cat01 {
 .shelf1 .flower-jar-shelf::after {
     bottom: 7%;
     left: 41%;
-    background: url(../images/skills/pink_flower.png) center / contain no-repeat;
+    background: url(../images/skills/pink_flower.webp) center / contain no-repeat;
     z-index: 2;
     transform-origin: bottom center;
     animation: swinginhanging1stem 5s ease-in-out infinite;
@@ -398,7 +398,7 @@ img.cat01 {
 
 /* ----------------- */
 .shelf.shelf2{
-    background: url(../images/skills/shelf.png) center / cover no-repeat;
+    background: url(../images/skills/shelf.webp) center / cover no-repeat;
     margin-left: 25px;
 }
 
@@ -409,7 +409,7 @@ img.cat01 {
     width: 257px;
     height: 250px;
     transform: rotate(3deg);
-    background: url(../images/skills/hanging_plant02.png) center / cover no-repeat;
+    background: url(../images/skills/hanging_plant02.webp) center / cover no-repeat;
 }
 
 .shelf2 .hanging-plants-shelf::before, .shelf2 .hanging-plants-shelf::after {
@@ -423,13 +423,13 @@ img.cat01 {
 
 .shelf2 .hanging-plants-shelf::before {
     left: 43%;
-    background: url(../images/skills/pink_1_stem.png) center / contain no-repeat;
+    background: url(../images/skills/pink_1_stem.webp) center / contain no-repeat;
     animation: swinginhangingstem 5s ease-in-out infinite;
 }
 
 .shelf2 .hanging-plants-shelf::after {
     left: 46%;
-    background: url(../images/skills/pink_1_stem.png) center / contain no-repeat;
+    background: url(../images/skills/pink_1_stem.webp) center / contain no-repeat;
     animation: swinginhangingstem 4.5s ease-in-out infinite;
 }
 
@@ -460,7 +460,7 @@ img.cat01 {
     top: 0;
     left: 0;
     width: 100%;
-    background: url(../images/skills/empty_green_jar.png) center / contain no-repeat;
+    background: url(../images/skills/empty_green_jar.webp) center / contain no-repeat;
     z-index: 3;
 }
 
@@ -473,7 +473,7 @@ img.cat01 {
 .shelf2 .flower-jar-shelf::before {
     bottom: 33%;
     left: 22%;
-    background: url(../images/skills/purple_flower.png) center / contain no-repeat;
+    background: url(../images/skills/purple_flower.webp) center / contain no-repeat;
     transform: scale(1.5) rotate(-9deg);
     z-index: 1;
 }
@@ -481,7 +481,7 @@ img.cat01 {
 .shelf2 .flower-jar-shelf::after {
     bottom: 7%;
     left: 41%;
-    background: url(../images/skills/purple_flower.png) center / contain no-repeat;
+    background: url(../images/skills/purple_flower.webp) center / contain no-repeat;
     z-index: 2;
     transform-origin: bottom center;
     animation: swinginhanging1stem 5.1s ease-in-out infinite;
@@ -801,7 +801,7 @@ img.mail {
     left: 7%;
     height: 123px;
     width: 72px;
-    background-image: url(../images/bat.png);
+    background-image: url(../images/bat.webp);
     background-position: center;
     background-size: 100% 100%;
     transition: top 500ms ease-in-out;
