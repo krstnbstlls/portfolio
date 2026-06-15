@@ -12,6 +12,33 @@
     100% { opacity:1; }
 }
 
+@media screen and (max-width: 1280px){
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.98);
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.92);
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(1);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shelf.shelf1 { margin-right: 0px; }
+    .shelf.shelf2 { 
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+}
+
 @media screen and (max-width: 1024px){
     p, span, .material-symbols-outlined, .certificates .item a {
         font-size: 20px;
@@ -87,21 +114,13 @@
 }
 
 @media screen and (max-width: 540px){
-    main {
-        padding: 0px 5%;
-    }
+    main { padding: 0px 5%; }
 
-    span.position {
-        top: -38%;
-    }
+    span.position { top: -38%; }
 
-    .info p {
-        margin-top: 5px!important;
-    }
+    .info p { margin-top: 5px!important; }
 
-    img.about-title, .crtfcts-title{
-        margin-bottom: 10px;
-    }
+    img.about-title, .crtfcts-title{ margin-bottom: 10px; }
 
     p, span, .material-symbols-outlined, .certificates .item a, .skills-grid p, .getintouch-block p.dets, .getintouch-block a {
         font-size: 12px;
@@ -114,15 +133,15 @@
         margin-top: 10px;
     }
 
-    .skills-grid img.skills {
-        height: 80px;
-    }
+    .skills-grid img.skills { height: 80px; }
 
-    .skills-grid img.rate, img.github, img.mail {
+    .skills-grid img.rate, 
+    img.github, img.mail {
         height: 12px;
     }
 
-    img.github, img.mail {
+    img.github, 
+    img.mail { 
         margin-right: 5px;
     }
 
@@ -131,9 +150,7 @@
         margin-top: 25px;
     }
 
-    .certificates .item {
-    margin-bottom: 10px;
-    }
+    .certificates .item { margin-bottom: 10px; }
 
     .grid-works {
         width: 100%;
@@ -141,9 +158,14 @@
     }
 
     .grid-outer-con{
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+
+    .wip-container{
+        margin-top: 50px;
     }
 
     .witchGirl{
@@ -158,62 +180,93 @@
         left: 50%;
         transform: translate(-50%, -0%);
     }
+
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.85);
+        margin-top: -48px;
+    }
 }
 
 @media screen and (max-width: 430px){
-    .skills-block .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .skills-block .skills-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.7);
+        margin-top: -116px;
+    }
+
+    .grid-outer-con {
+        margin-top: -89px;
+    }
+
+    .wip-container {
+        margin-top: 0px;
+        transform: translate(-50%, 0) scale(0.9);
     }
 }
 
 @media screen and (max-width: 414px){
-    img.cat01 {
-        width: 33%;
-    }
+    img.cat01 { width: 33%; }
 
-    .certificates {
-        width: 60%;
-    }
+    .certificates { width: 60%; }
 
-    .skills-grid img.rate {
-        height: 8px;
-    }
+    .skills-grid img.rate { height: 8px; }
 
-    img.getintouch {
-        height: 25px;
-    }
+    img.getintouch { height: 25px; }
 
-    .bookshelves {
-        transform: translate(-50%, -0%) scale(0.96);
+    .bookshelves { transform: translate(-50%, -0%) scale(0.96); }
+
+    .wip-container {
+        margin-top: -15px;
+        transform: translate(-48%, 0) scale(0.85);
     }
 }
 
 @media screen and (max-width: 390px){
-    .bookshelves {
-        transform: translate(-50%, -0%) scale(0.9);
+    .bookshelves { transform: translate(-50%, -0%) scale(0.9); }
+
+    .wip-container {
+        margin-top: -15px;
+        transform: translate(-49%, 0) scale(0.8);
     }
 }
 
 @media screen and (max-width: 375px){
-
+    .potion-skills { transform: translate(-50%, -0%) scale(0.67); }
 }
 
 @media screen and (max-width: 360px){
-    .bookshelves {
-        transform: translate(-50%, -0%) scale(0.85);
+    .bookshelves { transform: translate(-50%, -0%) scale(0.85); }
+    .wip-container {
+        margin-top: -53px;
+        transform: translate(-49%, 0) scale(0.75);
     }
+
 }
 
 @media screen and (max-width: 344px){
-    .bookshelves {
-        transform: translate(-50%, -0%) scale(0.8);
+    .bookshelves { transform: translate(-50%, -0%) scale(0.8); }
+
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.6);
+        margin-top: -159px;
     }
 
+    .grid-outer-con {
+        margin-top: -132px;
+    }
 }
 
 @media screen and (max-width: 320px){
+    img.under-construction { height: 200px; }
 
-    img.under-construction {
-        height: 200px;
+    .potion-skills {
+        transform: translate(-50%, -0%) scale(0.55);
+        margin-top: -183px;
+    }
+
+    .wip-container {
+        margin-top: -72px;
+        transform: translate(-49%, 0) scale(0.65);
     }
 }

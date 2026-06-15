@@ -223,31 +223,345 @@ img.cat01 {
 	animation: float 3s ease-in-out infinite;
 }
 
+/* ------------------------------------------------ */
+.skills-block{
+    position: relative;
+}
+
+.potion-skills {
+    position: relative;
+    width: 1244px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.shelf {
+    position: relative;
+    width: 597px;
+    height: 427px;
+}
+
+.shelf.shelf1{
+    background: url(../images/skills/shelf.png) center / cover no-repeat;
+    margin-right: 25px;
+}
+
+.shelf1 .hanging-plants-shelf {
+    position: absolute;
+    top: 27px;
+    left: 2px;
+    width: 257px;
+    height: 250px;
+    transform: rotate(3deg);
+    background: url(../images/skills/hanging_plant01.png) center / cover no-repeat;
+}
+
+.shelf1 .hanging-plants-shelf::before, .shelf1 .hanging-plants-shelf::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    width: 40px;
+    height: 181px;
+    transform-origin: top center;
+}
+
+.shelf1 .hanging-plants-shelf::before {
+    left: 43%;
+    background: url(../images/skills/purple_1_stem.png) center / contain no-repeat;
+    animation: swinginhangingstem 5s ease-in-out infinite;
+}
+
+.shelf1 .hanging-plants-shelf::after {
+    left: 46%;
+    background: url(../images/skills/purple_1_stem.png) center / contain no-repeat;
+    animation: swinginhangingstem 4.5s ease-in-out infinite;
+}
+
+@keyframes swinginhangingstem {
+  0%   { transform: rotate(-3deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+/* ----------------- */
+.shelf1 .flower-jar-shelf {
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    width: 126px;
+    height: 156px;
+    z-index: 1;
+}
+
+.shelf1 .empty-jar, 
+.shelf1 .flower-jar-shelf::before, 
+.shelf1 .flower-jar-shelf::after {
+    position: absolute;
+    height: 100%;
+}
+
+.shelf1 .empty-jar{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url(../images/skills/empty_red_jar.png) center / contain no-repeat;
+    z-index: 3;
+}
+
+.shelf1 .flower-jar-shelf::before, 
+.shelf1 .flower-jar-shelf::after {
+    content: '';
+    width: 40px;
+}
+
+.shelf1 .flower-jar-shelf::before {
+    bottom: 33%;
+    left: 22%;
+    background: url(../images/skills/pink_flower.png) center / contain no-repeat;
+    transform: scale(1.5) rotate(-9deg);
+    z-index: 1;
+}
+
+.shelf1 .flower-jar-shelf::after {
+    bottom: 7%;
+    left: 41%;
+    background: url(../images/skills/pink_flower.png) center / contain no-repeat;
+    z-index: 2;
+    transform-origin: bottom center;
+    animation: swinginhanging1stem 5s ease-in-out infinite;
+}
+
+@keyframes swinginhanging1stem {
+  0%   { transform: scale(2) rotate(3deg); }
+  50%  { transform: scale(2) rotate(-3deg); }
+  100% { transform: scale(2) rotate(3deg); }
+}
+
+/* ----------------- */
+.bottles-f1 {
+    position: absolute;
+    bottom: 18%;
+    left: 0%;
+    height: 187px;
+    width: 100%;
+    z-index: 2;
+}
+
+.bottles-f1 .html-bt {
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+    height: 100%;
+    width: auto;
+    z-index: 5;
+}
+
+.bottles-f1 .css-bt {
+    position: absolute;
+    bottom: 0;
+    right: 21%;
+    height: 93%;
+    width: auto;
+    z-index: 4;
+}
+
+.bottles-f1 .js-bt {
+    position: absolute;
+    bottom: 0;
+    right: 38%;
+    height: 96%;
+    width: auto;
+    z-index: 3;
+}
+
+.bottles-f1 .jq-bt {
+    position: absolute;
+    bottom: 0;
+    right: 57%;
+    height: 103%;
+    width: auto;
+    z-index: 2;
+}
+
+.bottles-f1 .btstrp-bt {
+    position: absolute;
+    bottom: 0;
+    right: 72%;
+    height: 103%;
+    width: auto;
+    z-index: 1;
+}
+
+/* ----------------- */
+.shelf.shelf2{
+    background: url(../images/skills/shelf.png) center / cover no-repeat;
+    margin-left: 25px;
+}
+
+.shelf2 .hanging-plants-shelf {
+    position: absolute;
+    top: 29px;
+    right: 15px;
+    width: 257px;
+    height: 250px;
+    transform: rotate(3deg);
+    background: url(../images/skills/hanging_plant02.png) center / cover no-repeat;
+}
+
+.shelf2 .hanging-plants-shelf::before, .shelf2 .hanging-plants-shelf::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    width: 40px;
+    height: 118px;
+    transform-origin: top center;
+}
+
+.shelf2 .hanging-plants-shelf::before {
+    left: 43%;
+    background: url(../images/skills/pink_1_stem.png) center / contain no-repeat;
+    animation: swinginhangingstem 5s ease-in-out infinite;
+}
+
+.shelf2 .hanging-plants-shelf::after {
+    left: 46%;
+    background: url(../images/skills/pink_1_stem.png) center / contain no-repeat;
+    animation: swinginhangingstem 4.5s ease-in-out infinite;
+}
+
+@keyframes swinginhangingstem {
+  0%   { transform: rotate(-3deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+/* ----------------- */
+.shelf2 .flower-jar-shelf {
+    position: absolute;
+    bottom: 22%;
+    left: 14%;
+    width: 142px;
+    height: 179px;
+    z-index: 1;
+}
+
+.shelf2 .empty-jar, 
+.shelf2 .flower-jar-shelf::before, 
+.shelf2 .flower-jar-shelf::after {
+    position: absolute;
+    height: 100%;
+}
+
+.shelf2 .empty-jar{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url(../images/skills/empty_green_jar.png) center / contain no-repeat;
+    z-index: 3;
+}
+
+.shelf2 .flower-jar-shelf::before, 
+.shelf2 .flower-jar-shelf::after {
+    content: '';
+    width: 40px;
+}
+
+.shelf2 .flower-jar-shelf::before {
+    bottom: 33%;
+    left: 22%;
+    background: url(../images/skills/purple_flower.png) center / contain no-repeat;
+    transform: scale(1.5) rotate(-9deg);
+    z-index: 1;
+}
+
+.shelf2 .flower-jar-shelf::after {
+    bottom: 7%;
+    left: 41%;
+    background: url(../images/skills/purple_flower.png) center / contain no-repeat;
+    z-index: 2;
+    transform-origin: bottom center;
+    animation: swinginhanging1stem 5.1s ease-in-out infinite;
+}
+
+@keyframes swinginhanging1stem {
+  0%   { transform: scale(2) rotate(3deg); }
+  50%  { transform: scale(2) rotate(-3deg); }
+  100% { transform: scale(2) rotate(3deg); }
+}
+
+/* ----------------- */
+.bottles-f2 {
+    position: absolute;
+    bottom: 17%;
+    left: 0%;
+    height: 187px;
+    width: 100%;
+    z-index: 2;
+}
+
+.bottles-f2 .php-bt {
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    height: 102%;
+    width: auto;
+    z-index: 1;
+}
+
+.bottles-f2 .wbflw-bt {
+    position: absolute;
+    bottom: 0;
+    left: 19%;
+    height: 93%;
+    width: auto;
+    z-index: 2;
+}
+
+.bottles-f2 .figma-bt {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    height: 103%;
+    width: auto;
+    z-index: 3;
+}
+
+.bottles-f2 .git-bt {
+    position: absolute;
+    bottom: 0;
+    right: 32%;
+    height: 81%;
+    width: auto;
+    z-index: 5;
+}
+
+.bottles-f2 .lrvl-bt {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    height: 109%;
+    width: auto;
+    z-index: 4;
+}
+
+.bottles-f2 .react-bt {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    height: 90%;
+    width: auto;
+    z-index: 6;
+}
+
+/* ------------------------------------------------ */
 img.skills-title {
     margin: 0px auto 0px auto;
 }
 
-.skills-block .skills-grid {
-    display: grid;
-	justify-items: center;
-    grid-template-columns: repeat(7, 1fr);
-    grid-column-gap: 18px;
-    grid-row-gap: 40px;
-    margin-top: 40px;
-}
-
-.skills-grid img.skills {
-    height: 137px;
-	margin-bottom: 10px;
-}
-
-.skills-grid p {
-    font-size: 18px;
-}
-
-.skills-grid img.rate {
-    height: 18px;
-}
 
 /* --//////////////////////-- */
 .grid-works {
@@ -451,11 +765,18 @@ img.mail {
     margin-top: 100px;
 } */
 
-.wip-container{
+/* ============================== */
+.grid-outer-con {
+    margin-top: 150px;
+}
+
+.wip-container {
     position: relative;
-    width: 42%;
+    width: 444px;
     height: 500px;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .wip-bg, .wip-container::after{
