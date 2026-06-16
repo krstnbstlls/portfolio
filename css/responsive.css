@@ -154,7 +154,7 @@
 
     .grid-works {
         width: 100%;
-        margin: 12px auto 0px;
+        margin: 50px auto 0px;
     }
 
     .grid-outer-con{
@@ -220,6 +220,10 @@
         margin-top: -15px;
         transform: translate(-48%, 0) scale(0.85);
     }
+
+    .grid-works {
+        margin: 15px auto 0px;
+    }
 }
 
 @media screen and (max-width: 390px){
@@ -228,6 +232,10 @@
     .wip-container {
         margin-top: -15px;
         transform: translate(-49%, 0) scale(0.8);
+    }
+
+    .grid-works {
+        margin: -17px auto 0px;
     }
 }
 
@@ -254,6 +262,10 @@
 
     .grid-outer-con {
         margin-top: -132px;
+    }
+
+    .grid-works {
+        margin: -42px auto 0px;
     }
 }
 
